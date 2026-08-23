@@ -1,0 +1,143 @@
+ISTORY OF ALL REQUESTS
+=====================================================================
+Arquivo consolidado com todos os requests para teste do projeto.
+Execute cada bloco separadamente (separados por ###).
+=====================================================================
+
+
+=====================================================================
+1. CRIAR TRANSAÇÕES
+=====================================================================
+
+### Criar transação - GROCERIES (sem createdAt)
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Compras no supermercado",
+  "category": "GROCERIES",
+  "amount": 15450
+}
+
+### Criar transação - PHARMA (sem createdAt)
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Remédio para gripe",
+  "category": "PHARMA",
+  "amount": 3200
+}
+
+### Criar transação - AUTO (sem createdAt)
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Abastecimento do carro",
+  "category": "AUTO",
+  "amount": 25000
+}
+
+### Criar transação - GROCERIES com createdAt
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Feira semanal",
+  "category": "GROCERIES",
+  "amount": 8700,
+  "createdAt": "2026-08-21T14:30:00Z"
+}
+
+### Criar transação - PHARMA com createdAt
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Vitamina C",
+  "category": "PHARMA",
+  "amount": 4500,
+  "createdAt": "2026-08-15T09:00:00Z"
+}
+
+### Criar transação - AUTO com createdAt
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Troca de óleo",
+  "category": "AUTO",
+  "amount": 18000,
+  "createdAt": "2026-07-10T11:00:00Z"
+}
+
+
+=====================================================================
+2. LISTAR POR CATEGORIA
+=====================================================================
+
+### Listar transações - GROCERIES
+GET http://localhost:8080/transactions/GROCERIES
+
+### Listar transações - PHARMA
+GET http://localhost:8080/transactions/PHARMA
+
+### Listar transações - AUTO
+GET http://localhost:8080/transactions/AUTO
+
+
+=====================================================================
+3. LISTAR POR SEMANA (ISO)
+=====================================================================
+
+### Semana 34 de 2026 (AGO 17-23)
+GET http://localhost:8080/transactions/week/2026/34
+
+### Semana 33 de 2026 (AGO 10-16)
+GET http://localhost:8080/transactions/week/2026/33
+
+### Semana 1 de 2026
+GET http://localhost:8080/transactions/week/2026/1
+
+### Semana inválida (0) → 400 Bad Request
+GET http://localhost:8080/transactions/week/2026/0
+
+### Semana inválida (54) → 400 Bad Request
+GET http://localhost:8080/transactions/week/2026/54
+
+
+=====================================================================
+4. LISTAR POR MÊS
+=====================================================================
+
+### Agosto 2026
+GET http://localhost:8080/transactions/month/2026/8
+
+### Julho 2026
+GET http://localhost:8080/transactions/month/2026/7
+
+### Janeiro 2026
+GET http://localhost:8080/transactions/month/2026/1
+
+### Mês inválido (0) → 400 Bad Request
+GET http://localhost:8080/transactions/month/2026/0
+
+### Mês inválido (13) → 400 Bad Request
+GET http://localhost:8080/transactions/month/2026/13
+
+
+=====================================================================
+5. TRANSCRIÇÃO DE ÁUDIO (IA)
+=====================================================================
+
+### Transcrever áudio via IA (substitua o caminho do arquivo)
+POST http://localhost:8080/transactions/ai
+Content-Type: multipart/form-data
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="recording-1.m4a"
+Content-Type: audio/mp4
+
+< ./src/test/resources/audio/recording-1.m4a
+--boundary--

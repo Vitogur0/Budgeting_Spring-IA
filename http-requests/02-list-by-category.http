@@ -1,0 +1,8 @@
+### Listar transações - GROCERIES
+GET http://localhost:8080/transactions/GROCERIES
+
+### Listar transações - PHARMA
+GET http://localhost:8080/transactions/PHARMA
+
+### Listar transações - AUTO
+GET http://localhost:8080/transactions/AUTO

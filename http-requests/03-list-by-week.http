@@ -1,0 +1,17 @@
+### Listar transações - Semana 34 de 2026 (AGO 17-23)
+GET http://localhost:8080/transactions/week/2026/34
+
+### Listar transações - Semana 33 de 2026 (AGO 10-16)
+GET http://localhost:8080/transactions/week/2026/33
+
+### Listar transações - Semana 1 de 2026
+GET http://localhost:8080/transactions/week/2026/1
+
+### Listar transações - Semana 53 de 2026 (cenário极限)
+GET http://localhost:8080/transactions/week/2026/53
+
+### Listar transações - Semana inválida (0) → deve retornar 400
+GET http://localhost:8080/transactions/week/2026/0
+
+### Listar transações - Semana inválida (54) → deve retornar 400
+GET http://localhost:8080/transactions/week/2026/54

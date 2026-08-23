@@ -1,0 +1,10 @@
+### Transcrever áudio via IA (substitua o caminho do arquivo conforme necessário)
+POST http://localhost:8080/transactions/ai
+Content-Type: multipart/form-data
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="recording-1.m4a"
+Content-Type: audio/mp4
+
+< ./src/test/resources/audio/recording-1.m4a
+--boundary--

@@ -1,0 +1,17 @@
+### Listar transações - Agosto 2026
+GET http://localhost:8080/transactions/month/2026/8
+
+### Listar transações - Julho 2026
+GET http://localhost:8080/transactions/month/2026/7
+
+### Listar transações - Janeiro 2026
+GET http://localhost:8080/transactions/month/2026/1
+
+### Listar transações - Dezembro 2026
+GET http://localhost:8080/transactions/month/2026/12
+
+### Listar transações - Mês inválido (0) → deve retornar 400
+GET http://localhost:8080/transactions/month/2026/0
+
+### Listar transações - Mês inválido (13) → deve retornar 400
+GET http://localhost:8080/transactions/month/2026/13

@@ -1,0 +1,62 @@
+### Criar transação - GROCERIES (sem createdAt - usa Instant.now())
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Compras no supermercado",
+  "category": "GROCERIES",
+  "amount": 15450
+}
+
+### Criar transação - PHARMA (sem createdAt)
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Remédio para gripe",
+  "category": "PHARMA",
+  "amount": 3200
+}
+
+### Criar transação - AUTO (sem createdAt)
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Abastecimento do carro",
+  "category": "AUTO",
+  "amount": 25000
+}
+
+### Criar transação - GROCERIES com createdAt explícito
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Feira semanal",
+  "category": "GROCERIES",
+  "amount": 8700,
+  "createdAt": "2026-08-21T14:30:00Z"
+}
+
+### Criar transação - PHARMA com createdAt explícito
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Vitamina C",
+  "category": "PHARMA",
+  "amount": 4500,
+  "createdAt": "2026-08-15T09:00:00Z"
+}
+
+### Criar transação - AUTO com createdAt explícito
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Troca de óleo",
+  "category": "AUTO",
+  "amount": 18000,
+  "createdAt": "2026-07-10T11:00:00Z"
+}
